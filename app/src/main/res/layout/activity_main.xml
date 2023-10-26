@@ -5,54 +5,81 @@
     android:id="@+id/jokenpo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_secondary"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/backgroundJkp"
-        android:layout_width="384dp"
-        android:layout_height="177dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/backgroundJkp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background_jokenpo" />
-
-    <ImageView
-        android:id="@+id/imageViewP2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="50dp"
-        android:contentDescription="@string/imageViewP2"
-        app:layout_constraintBottom_toTopOf="@+id/buttonTesoura"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/interrogacao"
-        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/imageViewP1"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="-10dp"
         android:contentDescription="@string/imageViewP1"
         app:layout_constraintBottom_toTopOf="@+id/buttonPedra"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewVS"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/interrogacao"
         tools:ignore="ImageContrastCheck" />
 
+    <ImageView
+        android:id="@+id/imageViewP2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="-10dp"
+        android:contentDescription="@string/imageViewP2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTesoura"
+        app:layout_constraintStart_toEndOf="@+id/imageViewVS"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/interrogacao"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageViewVS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="@string/imageViewVS"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPapel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vs"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/buttonPedra"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="120dp"
+        android:contentDescription="@string/buttonPedra"
+        android:onClick="toqueBotao"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pedra"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/buttonPapel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="100dp"
+        android:contentDescription="@string/buttonPapel"
+        android:onClick="toqueBotao"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/papel"
+        tools:ignore="ImageContrastCheck" />
+
     <ImageButton
         android:id="@+id/buttonTesoura"
-        android:layout_width="101dp"
-        android:layout_height="99dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="120dp"
         android:contentDescription="@string/buttonTesoura"
         android:onClick="toqueBotao"
         android:scaleType="centerCrop"
@@ -62,48 +89,30 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/buttonPapel"
-        android:layout_width="101dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="25dp"
-        android:contentDescription="@string/buttonPapel"
+        android:id="@+id/buttonLagarto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/buttonLagarto"
         android:onClick="toqueBotao"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonTesoura"
-        app:layout_constraintStart_toEndOf="@+id/buttonPedra"
-        app:srcCompat="@drawable/papel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lagarto"
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/buttonPedra"
-        android:layout_width="101dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="25dp"
-        android:contentDescription="@string/buttonPedra"
+        android:id="@+id/buttonSpock"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/buttonSpock"
         android:onClick="toqueBotao"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/pedra" />
-
-    <ImageView
-        android:id="@+id/imageViewVS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="30dp"
-        android:contentDescription="@string/imageViewVS"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPapel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498"
-        app:srcCompat="@drawable/vs"
-        tools:ignore="ImageContrastCheck" />
+        app:srcCompat="@drawable/spock" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
